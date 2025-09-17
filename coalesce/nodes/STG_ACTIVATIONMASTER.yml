@@ -1,0 +1,107 @@
+fileVersion: 1
+id: 6a4b2d7f-938e-4c9d-90a7-4d3e8c5d76f2
+name: STG_ACTIVATIONMASTER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALCOBEVDB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a2b3c4d-8e9f-4a5b-6c7d-8e9f0a1b2c3d
+          stepCounter: 6a4b2d7f-938e-4c9d-90a7-4d3e8c5d76f2
+        config: {}
+        dataType: STRING
+        description: ""
+        name: PRODUCTLEVELCODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1217e997-7c79-459d-ac1f-0b44b82d02c7
+                stepCounter: 593a1c6e-827d-4b8c-8f96-3c2d7b4c65e1
+            transform: SRC_ACTIVATIONMASTER.PRODUCTLEVELCODE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2b3c4d5e-9f0a-4b6c-7d8e-9f0a1b2c3d4e
+          stepCounter: 6a4b2d7f-938e-4c9d-90a7-4d3e8c5d76f2
+        config: {}
+        dataType: STRING
+        description: ""
+        name: PROMOTIONDESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2d3345d2-f47a-4076-a23f-422ac58f5f6b
+                stepCounter: 593a1c6e-827d-4b8c-8f96-3c2d7b4c65e1
+            transform: LTRIM(RTRIM(SRC_ACTIVATIONMASTER.PROMOTIONDESCRIPTION))
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3c4d5e6f-0a1b-4c7d-8e9f-0a1b2c3d4e5f
+          stepCounter: 6a4b2d7f-938e-4c9d-90a7-4d3e8c5d76f2
+        config: {}
+        dataType: STRING
+        description: ""
+        name: EFFECTIVEFROM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3266cf1f-06d9-43c2-8433-2a81c4e723cc
+                stepCounter: 593a1c6e-827d-4b8c-8f96-3c2d7b4c65e1
+            transform: SRC_ACTIVATIONMASTER.EFFECTIVEFROM
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4d5e6f7a-1b2c-4d8e-9f0a-1b2c3d4e5f6g
+          stepCounter: 6a4b2d7f-938e-4c9d-90a7-4d3e8c5d76f2
+        config: {}
+        dataType: STRING
+        description: ""
+        name: EFFECTIVETO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8b0c8045-8134-4a25-83f1-d0023a8e998e
+                stepCounter: 593a1c6e-827d-4b8c-8f96-3c2d7b4c65e1
+            transform: SRC_ACTIVATIONMASTER.EFFECTIVETO
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5e6f7a8b-2c3d-4e9f-0a1b-2c3d4e5f6g7h
+          stepCounter: 6a4b2d7f-938e-4c9d-90a7-4d3e8c5d76f2
+        config: {}
+        dataType: BIGINT
+        description: Ranks promotions for each product by effective date to find the latest one.
+        name: PROMO_RANK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ROW_NUMBER() OVER (PARTITION BY PRODUCTLEVELCODE ORDER BY EFFECTIVEFROM DESC)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ALCOBEVDB
+            nodeName: SRC_ACTIVATIONMASTER
+        join:
+          joinCondition: FROM {{ ref('ALCOBEV', 'SRC_ACTIVATIONMASTER') }} AS SRC_ACTIVATIONMASTER
+        name: STG_ACTIVATIONMASTER
+        noLinkRefs: []
+  name: STG_ACTIVATIONMASTER
+  overrideSQL: false
+  schema: ALCOBEV
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
