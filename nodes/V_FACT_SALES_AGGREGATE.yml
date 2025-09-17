@@ -1,0 +1,516 @@
+fileVersion: 1
+id: 57442654-e67c-444f-b649-74d1a0d7f951
+name: V_FACT_SALES_AGGREGATE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: DBSHIFT
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DBSHIFT
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 1f0a1d2c-3b4e-4f5a-6b7c-8d9e0f1a2b3c
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: INTEGER
+      description: ""
+      name: CUSTOMER_ID
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 8b0c8004-9ca3-4f9e-a89e-004543169f4f
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.CUSTOMER_ID
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 2f0a1d2c-3b4e-4f5a-6b7c-8d9e0f1a2b3c
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: PRODUCT_CATEGORY
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 16d63428-1114-4eb9-a359-0091216dd191
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.PRODUCT_CATEGORY
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 3f0a1d2c-3b4e-4f5a-6b7c-8d9e0f1a2b3c
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: PRODUCT_SUBCATEGORY
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 63e3d242-a6fc-46a3-acb1-d309191d4e08
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.PRODUCT_SUBCATEGORY
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 4f0a1d2c-3b4e-4f5a-6b7c-8d9e0f1a2b3c
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: PAYMENT_METHOD
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 7714897f-94d3-4613-887e-d3927d7f7690
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.PAYMENT_METHOD
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 5f0a1d2c-3b4e-4f5a-6b7c-8d9e0f1a2b3c
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: SHIPPING_TYPE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: a206b0d9-0c64-42b7-a379-3d077b960c1d
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.SHIPPING_TYPE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 6f0a1d2c-3b4e-4f5a-6b7c-8d9e0f1a2b3c
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: PLATFORM_USED
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 93fc13c2-d3b2-4cd8-809c-e36683e91129
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.PLATFORM_USED
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 7f0a1d2c-3b4e-4f5a-6b7c-8d9e0f1a2b3c
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: DATE
+      description: ""
+      name: MANU_DATE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: d360dafe-1f6e-41d9-8139-4fd450519f9f
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.MANU_DATE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 8f0a1d2c-3b4e-4f5a-6b7c-8d9e0f1a2b3c
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: INTEGER
+      description: ""
+      name: DAYS_BETWEEN_MANU_AND_ORDER
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: a2a313b8-3e4b-4c4c-b51f-51978d389025
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.DAYS_BETWEEN_MANU_AND_ORDER
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 9f0a1d2c-3b4e-4f5a-6b7c-8d9e0f1a2b3c
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: DECIMAL(38,2)
+      description: ""
+      name: TOTAL_SALES
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 8b06d445-93df-4039-9d6c-662584102c77
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.TOTAL_SALES
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: af0a1d2c-3b4e-4f5a-6b7c-8d9e0f1a2b3c
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: DECIMAL(18,2)
+      description: ""
+      name: AVERAGE_SALES
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 18b704e1-2550-4ed2-a9ae-bbcf440268e0
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.AVERAGE_SALES
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: bf0a1d2c-3b4e-4f5a-6b7c-8d9e0f1a2b3c
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: FLOAT
+      description: ""
+      name: DISCOUNT_APPLIED
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: a6319808-8f85-4876-be11-f17a5cf2be79
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.DISCOUNT_APPLIED
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: cf0a1d2c-3b4e-4f5a-6b7c-8d9e0f1a2b3c
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: DECIMAL(12,2)
+      description: ""
+      name: NET_COST
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: c02f5a6a-775c-4861-ac32-a60d05632b4b
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.NET_COST
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: df0a1d2c-3b4e-4f5a-6b7c-8d9e0f1a2b3c
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: ORDER_PRIORITY
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: cbac0c23-7476-4c91-a18a-f5bbd9401768
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.ORDER_PRIORITY
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: ef0a1d2c-3b4e-4f5a-6b7c-8d9e0f1a2b3c
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: PRIORITY
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 0a93108c-663d-495e-99dd-296561217b96
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.PRIORITY
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 1a0b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: STE_GROUP_EXCLUDE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 53c713b1-ef17-47ab-a1a3-2c1b528b8a07
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.STE_GROUP_EXCLUDE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 2a0b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: VIDEO_GROUP_EXCLUDE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: ca43bebc-8521-4560-a292-69f2e3d36bfa
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.VIDEO_GROUP_EXCLUDE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 3a0b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: NIELSEN_DAR
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 934572bf-8260-46eb-8a9d-b8d962057393
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.NIELSEN_DAR
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 4a0b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: COMSCORE_VCE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 15152a23-442a-460d-85ab-253b218d6e38
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.COMSCORE_VCE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 5a0b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: ADVANCED_CONTENT
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: a63d489b-7cc2-4d7a-ac3e-51c37c2cd708
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.ADVANCED_CONTENT
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 6a0b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: GROSS_IMPRESSON_CAP
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 6365444b-4b1f-49b8-a15d-85eb5d6a2f39
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.GROSS_IMPRESSON_CAP
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 7a0b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: STE_GROUP
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 472fd568-1ef6-4d05-b827-02082b2fc377
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.STE_GROUP
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 8a0b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: VIDEO_GROUP
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: a9d82e2c-29b3-4f93-8dd6-9f893fa91054
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.VIDEO_GROUP
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 9a0b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: CUSTOM_PACING
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: b131a473-b3c9-4b13-ab41-2c09192eb63c
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.CUSTOM_PACING
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: aa0b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: DEAL_TYPE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 1a998d57-e95e-4c08-b12e-1412b5e0c822
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.DEAL_TYPE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: ba0b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: AUDIENCE_SEGMENT
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 5f190e27-e436-4d2b-b5d1-678401340b15
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.AUDIENCE_SEGMENT
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: ca0b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: DELIVERY_FREQUENCY
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 3267597f-1d11-4475-ac60-49662b667232
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.DELIVERY_FREQUENCY
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: da0b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: AD_UNIT
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: f318ef1e-e24c-4734-9799-a9a3b2b52479
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.AD_UNIT
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: ea0b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: CITY
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 1e57c865-8b35-4303-ac89-b5a037dfc876
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.CITY
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: fa0b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: CITY_EXCLUDE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: dd7884fd-9fca-448f-aa1a-a035043a9b1c
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.CITY_EXCLUDE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 0b1c2d3e-5f6a-7b8c-9d0e-1f2a3b4c5d6e
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: GEO_DMA
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: c065113b-d510-4d4b-97e3-0c46b1424ac1
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.GEO_DMA
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 1b1c2d3e-5f6a-7b8c-9d0e-1f2a3b4c5d6e
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: GEO_DMA_EXCLUDE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 4725bb79-1144-42f2-89e4-c71d6447e099
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.GEO_DMA_EXCLUDE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 2b1c2d3e-5f6a-7b8c-9d0e-1f2a3b4c5d6e
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: GEO_STATE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 7b9d7e78-5a02-40f4-a083-d9620edb5d8d
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.GEO_STATE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 3b1c2d3e-5f6a-7b8c-9d0e-1f2a3b4c5d6e
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: GEO_STATE_EXCLUDE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 7150a58e-0f18-450f-90e6-b9136e0d9b43
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.GEO_STATE_EXCLUDE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 4b1c2d3e-5f6a-7b8c-9d0e-1f2a3b4c5d6e
+        stepCounter: 57442654-e67c-444f-b649-74d1a0d7f951
+      config: {}
+      dataType: STRING
+      description: ""
+      name: ZIP_CODE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 757f5c71-2edb-4a57-b087-0b1a0e0513e9
+          stepCounter: d15f7938-16e6-4d7a-8f9f-09e3e3b0b722
+        transform: FACT_SALES_AGGREGATE.ZIP_CODE
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+    - aliases: {}
+      customSQL:
+        customSQL: ""
+      dependencies:
+      - locationName: DBSHIFT
+        nodeName: FACT_SALES_AGGREGATE
+      join:
+        joinCondition: FROM {{ ref('DBSHIFT', 'FACT_SALES_AGGREGATE') }} AS
+          FACT_SALES_AGGREGATE
+      name: V_FACT_SALES_AGGREGATE
+      noLinkRefs: []
+  name: V_FACT_SALES_AGGREGATE
+  overrideSQL: false
+  schema: DBSHIFT
+  sqlType: View
+  type: sql
+  version: 1
+type: Node
