@@ -1,0 +1,67 @@
+fileVersion: 1
+id: 7b8c9d0e-1f2a-4b3c-4d5e-6f7a8b9c0d1e
+name: STG_GEOGRAPHYMASTER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALCOBEVDB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3b4c5d6e-7f8a-4b9c-0d1e-2f3a4b5c6d7e
+          stepCounter: 7b8c9d0e-1f2a-4b3c-4d5e-6f7a8b9c0d1e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: STATECODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e89a2435-0b7c-4a34-87d4-037812f367e9
+                stepCounter: 28f645a6-9b87-43c2-841f-824c32b567d1
+            transform: SRC_GEOGRAPHYMASTER.STATECODE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4c5d6e7f-8a9b-4c0d-1e2f-3a4b5c6d7e8f
+          stepCounter: 7b8c9d0e-1f2a-4b3c-4d5e-6f7a8b9c0d1e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: STATENAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 21b28743-4f56-4c87-8d3f-561b32d2987a
+                stepCounter: 28f645a6-9b87-43c2-841f-824c32b567d1
+            transform: TRIM(SRC_GEOGRAPHYMASTER.STATENAME)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ALCOBEVDB
+            nodeName: SRC_GEOGRAPHYMASTER
+        join:
+          joinCondition: FROM {{ ref('ALCOBEV', 'SRC_GEOGRAPHYMASTER') }} AS SRC_GEOGRAPHYMASTER
+        name: STG_GEOGRAPHYMASTER
+        noLinkRefs: []
+  name: STG_GEOGRAPHYMASTER
+  overrideSQL: false
+  schema: ALCOBEV
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

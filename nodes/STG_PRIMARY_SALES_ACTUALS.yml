@@ -1,0 +1,111 @@
+fileVersion: 1
+id: 9d0e1f2a-3b4c-4d5e-6f7a-8b9c0d1e2f3a
+name: STG_PRIMARY_SALES_ACTUALS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALCOBEVDB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f8a9b0c-1d2e-4f3a-4b5c-6d7e8f9g0h1i
+          stepCounter: 9d0e1f2a-3b4c-4d5e-6f7a-8b9c0d1e2f3a
+        config: {}
+        dataType: STRING
+        description: ""
+        name: COMPANYCODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1a2b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d
+                stepCounter: a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d
+            transform: SRC_PRIMARY_SALES_ACTUALS.COMPANYCODE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a9b0c1d-2e3f-4a4b-5c6d-7e8f9g0h1i2j
+          stepCounter: 9d0e1f2a-3b4c-4d5e-6f7a-8b9c0d1e2f3a
+        config: {}
+        dataType: STRING
+        description: ""
+        name: STATECODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2b3c4d5e-6f7a-4b8c-9d0e-1f2a3b4c5d6e
+                stepCounter: a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d
+            transform: SRC_PRIMARY_SALES_ACTUALS.STATECODE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9b0c1d2e-3f4a-4b5c-6d7e-8f9g0h1i2j3k
+          stepCounter: 9d0e1f2a-3b4c-4d5e-6f7a-8b9c0d1e2f3a
+        config: {}
+        dataType: STRING
+        description: ""
+        name: SKUCODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3c4d5e6f-7a8b-4c9d-0e1f-2a3b4c5d6e7f
+                stepCounter: a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d
+            transform: SRC_PRIMARY_SALES_ACTUALS.SKUCODE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0c1d2e3f-4a5b-4c6d-7e8f-9g0h1i2j3k4l
+          stepCounter: 9d0e1f2a-3b4c-4d5e-6f7a-8b9c0d1e2f3a
+        config: {}
+        dataType: STRING
+        description: ""
+        name: VOLUMEACTUALCASE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4d5e6f7a-8b9c-4d0e-1f2a-3b4c5d6e7f8g
+                stepCounter: a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d
+            transform: TRIM(SRC_PRIMARY_SALES_ACTUALS.VOLUMEACTUALCASE)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1d2e3f4a-5b6c-4d7e-8f9g-0h1i2j3k4l5m
+          stepCounter: 9d0e1f2a-3b4c-4d5e-6f7a-8b9c0d1e2f3a
+        config: {}
+        dataType: STRING
+        description: ""
+        name: CUSTOMERCODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5e6f7a8b-9c0d-4e1f-2a3b-4c5d6e7f8g9h
+                stepCounter: a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d
+            transform: SRC_PRIMARY_SALES_ACTUALS.CUSTOMERCODE
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ALCOBEVDB
+            nodeName: SRC_PRIMARY_SALES_ACTUALS
+        join:
+          joinCondition: |-
+            FROM {{ ref('ALCOBEV', 'SRC_PRIMARY_SALES_ACTUALS') }} AS SRC_PRIMARY_SALES_ACTUALS
+            WHERE coalesce(try_cast(LTRIM(RTRIM(SRC_PRIMARY_SALES_ACTUALS.VOLUMEACTUALCASE)) as float), 0) > 0
+        name: STG_PRIMARY_SALES_ACTUALS
+        noLinkRefs: []
+  name: STG_PRIMARY_SALES_ACTUALS
+  overrideSQL: false
+  schema: ALCOBEV
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

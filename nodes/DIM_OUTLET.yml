@@ -1,0 +1,67 @@
+fileVersion: 1
+id: 7b8c9d0e-1f2a-4b3c-4d5e-6f7a8b9c0d1e
+name: DIM_OUTLET
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALCOBEVDB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5f6a7b8c-9d0e-4r1s-2t3u-4v5w6x7y8z9a
+          stepCounter: 7b8c9d0e-1f2a-4b3c-4d5e-6f7a8b9c0d1e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: OUTLET_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5d6e7f8a-9b0c-4d1e-2f3a-4b5c6d7e8f9g
+                stepCounter: 8c9d0e1f-2a3b-4c4d-5e6f-7a8b9c0d1e2f
+            transform: STG_OUTLETMASTER.OUTLET_CODE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6a7b8c9d-0e1f-4s2t-3u4v-5w6x7y8z9a0b
+          stepCounter: 7b8c9d0e-1f2a-4b3c-4d5e-6f7a8b9c0d1e
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: ACTIVE_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6e7f8a9b-0c1d-4e2f-3a4b-5c6d7e8f9g0h
+                stepCounter: 8c9d0e1f-2a3b-4c4d-5e6f-7a8b9c0d1e2f
+            transform: STG_OUTLETMASTER.ACTIVE_FLAG
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ALCOBEVDB
+            nodeName: STG_OUTLETMASTER
+        join:
+          joinCondition: FROM {{ ref('ALCOBEV', 'STG_OUTLETMASTER') }} AS STG_OUTLETMASTER
+        name: DIM_OUTLET
+        noLinkRefs: []
+  name: DIM_OUTLET
+  overrideSQL: false
+  schema: ALCOBEV
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node

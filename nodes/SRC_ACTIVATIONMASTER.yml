@@ -1,0 +1,92 @@
+fileVersion: 1
+id: 593a1c6e-827d-4b8c-8f96-3c2d7b4c65e1
+name: SRC_ACTIVATIONMASTER
+operation:
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  locationName: ALCOBEVDB
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1217e997-7c79-459d-ac1f-0b44b82d02c7
+          stepCounter: 593a1c6e-827d-4b8c-8f96-3c2d7b4c65e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: PRODUCTLEVELCODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d3345d2-f47a-4076-a23f-422ac58f5f6b
+          stepCounter: 593a1c6e-827d-4b8c-8f96-3c2d7b4c65e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: PROMOTIONDESCRIPTION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3266cf1f-06d9-43c2-8433-2a81c4e723cc
+          stepCounter: 593a1c6e-827d-4b8c-8f96-3c2d7b4c65e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: EFFECTIVEFROM
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b0c8045-8134-4a25-83f1-d0023a8e998e
+          stepCounter: 593a1c6e-827d-4b8c-8f96-3c2d7b4c65e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: EFFECTIVETO
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: SRC_ACTIVATIONMASTER
+  schema: ALCOBEV
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
