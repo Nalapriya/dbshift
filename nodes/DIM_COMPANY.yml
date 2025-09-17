@@ -1,0 +1,67 @@
+fileVersion: 1
+id: 5f6a7b8c-9d0e-4f1a-2b3c-4d5e6f7a8b9c
+name: DIM_COMPANY
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALCOBEVDB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1b2c3d4e-5f6a-4n7o-8p9q-0r1s2t3u4v5w
+          stepCounter: 5f6a7b8c-9d0e-4f1a-2b3c-4d5e6f7a8b9c
+        config: {}
+        dataType: STRING
+        description: ""
+        name: COMPANYCODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1f2a3b4c-5d6e-4f7a-8b9c-0d1e2f3a4b5c
+                stepCounter: 6a7b8c9d-0e1f-4a2b-3c4d-5e6f7a8b9c0d
+            transform: STG_COMPANYMASTER.COMPANYCODE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2c3d4e5f-6a7b-4o8p-9q0r-1s2t3u4v5w6x
+          stepCounter: 5f6a7b8c-9d0e-4f1a-2b3c-4d5e6f7a8b9c
+        config: {}
+        dataType: STRING
+        description: ""
+        name: COMPANYNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2a3b4c5d-6e7f-4a8b-9c0d-1e2f3a4b5c6d
+                stepCounter: 6a7b8c9d-0e1f-4a2b-3c4d-5e6f7a8b9c0d
+            transform: STG_COMPANYMASTER.COMPANYNAME
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ALCOBEVDB
+            nodeName: STG_COMPANYMASTER
+        join:
+          joinCondition: FROM {{ ref('ALCOBEV', 'STG_COMPANYMASTER') }} AS STG_COMPANYMASTER
+        name: DIM_COMPANY
+        noLinkRefs: []
+  name: DIM_COMPANY
+  overrideSQL: false
+  schema: ALCOBEV
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node

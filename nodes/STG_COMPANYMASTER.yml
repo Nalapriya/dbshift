@@ -1,0 +1,67 @@
+fileVersion: 1
+id: 6a7b8c9d-0e1f-4a2b-3c4d-5e6f7a8b9c0d
+name: STG_COMPANYMASTER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALCOBEVDB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f2a3b4c-5d6e-4f7a-8b9c-0d1e2f3a4b5c
+          stepCounter: 6a7b8c9d-0e1f-4a2b-3c4d-5e6f7a8b9c0d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: COMPANYCODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a63e6734-7275-4d7a-85d8-04f762f275e7
+                stepCounter: 59d57a3e-7b98-4b71-9c3f-c1f513f1b2d0
+            transform: SRC_COMPANYMASTER.COMPANYCODE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2a3b4c5d-6e7f-4a8b-9c0d-1e2f3a4b5c6d
+          stepCounter: 6a7b8c9d-0e1f-4a2b-3c4d-5e6f7a8b9c0d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: COMPANYNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6f8745d0-9e32-4e4f-b98a-211c4419992c
+                stepCounter: 59d57a3e-7b98-4b71-9c3f-c1f513f1b2d0
+            transform: TRIM(SRC_COMPANYMASTER.COMPANYNAME)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ALCOBEVDB
+            nodeName: SRC_COMPANYMASTER
+        join:
+          joinCondition: FROM {{ ref('ALCOBEV', 'SRC_COMPANYMASTER') }} AS SRC_COMPANYMASTER
+        name: STG_COMPANYMASTER
+        noLinkRefs: []
+  name: STG_COMPANYMASTER
+  overrideSQL: false
+  schema: ALCOBEV
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
