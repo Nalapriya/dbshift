@@ -1,0 +1,67 @@
+fileVersion: 1
+id: a23d1331-50e4-4d6b-9679-055375c347d4
+name: DIM_GEOGRAPHY
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALCOBEVDB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 90c88536-1e0e-473d-82d3-2f211eb5a6f2
+        stepCounter: a23d1331-50e4-4d6b-9679-055375c347d4
+      config: {}
+      dataType: STRING
+      description: ""
+      name: STATECODE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 16d9b4b0-a544-48cd-b17a-514d23250228
+          stepCounter: fe71a062-7e04-4b55-a070-51a84c3c3327
+        transform: STG_GEOGRAPHYMASTER.STATECODE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 48e9a4f4-006f-45a1-9b7e-967a5b3a4e9b
+        stepCounter: a23d1331-50e4-4d6b-9679-055375c347d4
+      config: {}
+      dataType: STRING
+      description: ""
+      name: STATENAME
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 847d0e82-e64e-4f27-995f-331e8c9c05e5
+          stepCounter: fe71a062-7e04-4b55-a070-51a84c3c3327
+        transform: STG_GEOGRAPHYMASTER.STATENAME
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+    - aliases: {}
+      customSQL:
+        customSQL: ""
+      dependencies:
+      - locationName: ALCOBEVDB
+        nodeName: STG_GEOGRAPHYMASTER
+      join:
+        joinCondition: FROM {{ ref('ALCOBEV', 'STG_GEOGRAPHYMASTER') }} AS `STG_GEOGRAPHYMASTER`
+      name: DIM_GEOGRAPHY
+      noLinkRefs: []
+  name: DIM_GEOGRAPHY
+  overrideSQL: false
+  schema: ALCOBEV
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,67 @@
+fileVersion: 1
+id: fe71a062-7e04-4b55-a070-51a84c3c3327
+name: STG_GEOGRAPHYMASTER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALCOBEVDB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 16d9b4b0-a544-48cd-b17a-514d23250228
+        stepCounter: fe71a062-7e04-4b55-a070-51a84c3c3327
+      config: {}
+      dataType: STRING
+      description: ""
+      name: STATECODE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 9c164a38-c30c-43f1-b956-6a0b27f42cf4
+          stepCounter: 5a8a4f91-118c-4423-a212-32b0d3e51241
+        transform: GEOGRAPHYMASTER.STATECODE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 847d0e82-e64e-4f27-995f-331e8c9c05e5
+        stepCounter: fe71a062-7e04-4b55-a070-51a84c3c3327
+      config: {}
+      dataType: STRING
+      description: ""
+      name: STATENAME
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 8b0c8b99-31e1-453b-8261-12c8b82c2a05
+          stepCounter: 5a8a4f91-118c-4423-a212-32b0d3e51241
+        transform: GEOGRAPHYMASTER.STATENAME
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+    - aliases: {}
+      customSQL:
+        customSQL: ""
+      dependencies:
+      - locationName: ALCOBEVDB
+        nodeName: GEOGRAPHYMASTER
+      join:
+        joinCondition: FROM {{ ref('ALCOBEV', 'GEOGRAPHYMASTER') }} AS `GEOGRAPHYMASTER`
+      name: STG_GEOGRAPHYMASTER
+      noLinkRefs: []
+  name: STG_GEOGRAPHYMASTER
+  overrideSQL: false
+  schema: ALCOBEV
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
