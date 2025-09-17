@@ -1,0 +1,111 @@
+fileVersion: 1
+id: 60a6a239-6e3e-436f-b679-055d7f023719
+name: STG_PRIMARY_SALES_ACTUALS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALCOBEVDB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: b138c204-6338-4a4e-a6a8-a83d463d1264
+        stepCounter: 60a6a239-6e3e-436f-b679-055d7f023719
+      config: {}
+      dataType: STRING
+      description: ""
+      name: COMPANYCODE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: e82f50d7-2f17-4835-a1eb-21ccf2b38865
+          stepCounter: 57d8a640-544d-4581-9b16-ab6624ddf601
+        transform: PRIMARY_SALES_ACTUALS.COMPANYCODE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 4e9f4e2f-2d1d-4876-8051-7f9a2e6e3c0b
+        stepCounter: 60a6a239-6e3e-436f-b679-055d7f023719
+      config: {}
+      dataType: STRING
+      description: ""
+      name: STATECODE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 3a13d789-9a29-4d87-90c2-51982b8a07f0
+          stepCounter: 57d8a640-544d-4581-9b16-ab6624ddf601
+        transform: PRIMARY_SALES_ACTUALS.STATECODE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: c01a613d-5197-4b77-88ab-d88e60935306
+        stepCounter: 60a6a239-6e3e-436f-b679-055d7f023719
+      config: {}
+      dataType: STRING
+      description: ""
+      name: SKUCODE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 1a457c15-4674-4b52-b89e-5c4d0e9a11a8
+          stepCounter: 57d8a640-544d-4581-9b16-ab6624ddf601
+        transform: PRIMARY_SALES_ACTUALS.SKUCODE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 8251e06d-534a-436f-8086-a6645fdce467
+        stepCounter: 60a6a239-6e3e-436f-b679-055d7f023719
+      config: {}
+      dataType: STRING
+      description: ""
+      name: VOLUMEACTUALCASE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 2f7c0411-d0b8-4c8e-a3f2-1405a8f09d84
+          stepCounter: 57d8a640-544d-4581-9b16-ab6624ddf601
+        transform: PRIMARY_SALES_ACTUALS.VOLUMEACTUALCASE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: d7f0e698-de73-455b-8016-1f4f5a2b376b
+        stepCounter: 60a6a239-6e3e-436f-b679-055d7f023719
+      config: {}
+      dataType: STRING
+      description: ""
+      name: CUSTOMERCODE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 7793d98c-8438-4e89-af91-53697e8de15c
+          stepCounter: 57d8a640-544d-4581-9b16-ab6624ddf601
+        transform: PRIMARY_SALES_ACTUALS.CUSTOMERCODE
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+    - aliases: {}
+      customSQL:
+        customSQL: ""
+      dependencies:
+      - locationName: ALCOBEVDB
+        nodeName: PRIMARY_SALES_ACTUALS
+      join:
+        joinCondition: |-
+          FROM {{ ref('ALCOBEV', 'PRIMARY_SALES_ACTUALS') }} AS `PRIMARY_SALES_ACTUALS`
+          WHERE coalesce(try_cast(LTRIM(RTRIM(`PRIMARY_SALES_ACTUALS`.VOLUMEACTUALCASE)) as float), 0) > 0
+      name: STG_PRIMARY_SALES_ACTUALS
+      noLinkRefs: []
+  name: STG_PRIMARY_SALES_ACTUALS
+  overrideSQL: false
+  schema: ALCOBEV
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
