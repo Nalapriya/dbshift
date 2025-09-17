@@ -1,0 +1,54 @@
+fileVersion: 1
+id: c1d2e3f4-a5b6-4c7d-8e9f-0a1b2c3d4e5f
+name: SRC_PRODUCTMASTER
+operation:
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  locationName: ALCOBEVDB
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9c0d1e2f-3a4b-4c5d-6e7f-8g9h0i1j2k3l
+          stepCounter: c1d2e3f4-a5b6-4c7d-8e9f-0a1b2c3d4e5f
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: SKUCODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d1e2f3a-4b5c-4d6e-7f8g-9h0i1j2k3l4m
+          stepCounter: c1d2e3f4-a5b6-4c7d-8e9f-0a1b2c3d4e5f
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: ITEMNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: SRC_PRODUCTMASTER
+  schema: ALCOBEV
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
