@@ -1,0 +1,92 @@
+fileVersion: 1
+id: 6e9e34d9-95e3-463e-b873-1f1f26a11e13
+name: ACTIVATIONMASTER
+operation:
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  locationName: ALCOBEVDB
+  metadata:
+    columns:
+    - acceptedValues:
+        strictMatch: true
+        values: []
+      appliedColumnTests: {}
+      columnReference:
+        columnCounter: d364a938-f1c5-472d-8e54-523c97693d7c
+        stepCounter: 6e9e34d9-95e3-463e-b873-1f1f26a11e13
+      config: {}
+      dataType: STRING
+      defaultValue: ""
+      description: ""
+      name: PRODUCTLEVELCODE
+      nullable: true
+      primaryKey: false
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: ""
+      transform: ""
+      uniqueKey: false
+    - acceptedValues:
+        strictMatch: true
+        values: []
+      appliedColumnTests: {}
+      columnReference:
+        columnCounter: a63b499f-e3c3-42e7-9d6e-1d54e4f7396c
+        stepCounter: 6e9e34d9-95e3-463e-b873-1f1f26a11e13
+      config: {}
+      dataType: STRING
+      defaultValue: ""
+      description: ""
+      name: PROMOTIONDESCRIPTION
+      nullable: true
+      primaryKey: false
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: ""
+      transform: ""
+      uniqueKey: false
+    - acceptedValues:
+        strictMatch: true
+        values: []
+      appliedColumnTests: {}
+      columnReference:
+        columnCounter: 3b137839-8692-411a-8809-7d84f885f838
+        stepCounter: 6e9e34d9-95e3-463e-b873-1f1f26a11e13
+      config: {}
+      dataType: STRING
+      defaultValue: ""
+      description: ""
+      name: EFFECTIVEFROM
+      nullable: true
+      primaryKey: false
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: ""
+      transform: ""
+      uniqueKey: false
+    - acceptedValues:
+        strictMatch: true
+        values: []
+      appliedColumnTests: {}
+      columnReference:
+        columnCounter: d684a275-d144-486d-88b9-4458f4a13809
+        stepCounter: 6e9e34d9-95e3-463e-b873-1f1f26a11e13
+      config: {}
+      dataType: STRING
+      defaultValue: ""
+      description: ""
+      name: EFFECTIVETO
+      nullable: true
+      primaryKey: false
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: ""
+      transform: ""
+      uniqueKey: false
+  name: ACTIVATIONMASTER
+  schema: ALCOBEV
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
