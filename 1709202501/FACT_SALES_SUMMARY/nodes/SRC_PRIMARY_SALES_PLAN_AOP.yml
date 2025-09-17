@@ -1,0 +1,73 @@
+fileVersion: 1
+id: 9a7b75f8-b3d5-4e78-98e3-05c48f2b7b51
+name: PRIMARY_SALES_PLAN_AOP
+operation:
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  locationName: ALCOBEVDB
+  metadata:
+    columns:
+    - acceptedValues:
+        strictMatch: true
+        values: []
+      appliedColumnTests: {}
+      columnReference:
+        columnCounter: 226e63df-0b5c-4467-9150-f8f01b3a2411
+        stepCounter: 9a7b75f8-b3d5-4e78-98e3-05c48f2b7b51
+      config: {}
+      dataType: STRING
+      defaultValue: ""
+      description: ""
+      name: STATECODE
+      nullable: true
+      primaryKey: false
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: ""
+      transform: ""
+      uniqueKey: false
+    - acceptedValues:
+        strictMatch: true
+        values: []
+      appliedColumnTests: {}
+      columnReference:
+        columnCounter: f3175402-990e-4340-bc84-b0a649363574
+        stepCounter: 9a7b75f8-b3d5-4e78-98e3-05c48f2b7b51
+      config: {}
+      dataType: STRING
+      defaultValue: ""
+      description: ""
+      name: SKUCODE
+      nullable: true
+      primaryKey: false
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: ""
+      transform: ""
+      uniqueKey: false
+    - acceptedValues:
+        strictMatch: true
+        values: []
+      appliedColumnTests: {}
+      columnReference:
+        columnCounter: 3a2c56a8-8e68-4508-8e89-1d489115b706
+        stepCounter: 9a7b75f8-b3d5-4e78-98e3-05c48f2b7b51
+      config: {}
+      dataType: STRING
+      defaultValue: ""
+      description: ""
+      name: PLAN_QTY
+      nullable: true
+      primaryKey: false
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: ""
+      transform: ""
+      uniqueKey: false
+  name: PRIMARY_SALES_PLAN_AOP
+  schema: ALCOBEV
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

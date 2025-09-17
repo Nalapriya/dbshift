@@ -1,0 +1,67 @@
+fileVersion: 1
+id: 597a7605-e10f-4318-97f2-1d5d590e80b4
+name: STG_PRODUCTMASTER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALCOBEVDB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: d7f0e698-de73-455b-8016-1f4f5a2b376b
+        stepCounter: 597a7605-e10f-4318-97f2-1d5d590e80b4
+      config: {}
+      dataType: STRING
+      description: ""
+      name: SKUCODE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: e3410f9e-a89e-4e42-9993-979929853820
+          stepCounter: bc0a8f89-c45f-4a0b-941f-17849c71991d
+        transform: PRODUCTMASTER.SKUCODE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: d1a90f1d-f8f8-4e89-a5e2-e1c52b2f1594
+        stepCounter: 597a7605-e10f-4318-97f2-1d5d590e80b4
+      config: {}
+      dataType: STRING
+      description: ""
+      name: ITEMNAME
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 97891e4a-c040-4d89-9d7a-b5e0037a341b
+          stepCounter: bc0a8f89-c45f-4a0b-941f-17849c71991d
+        transform: PRODUCTMASTER.ITEMNAME
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+    - aliases: {}
+      customSQL:
+        customSQL: ""
+      dependencies:
+      - locationName: ALCOBEVDB
+        nodeName: PRODUCTMASTER
+      join:
+        joinCondition: FROM {{ ref('ALCOBEV', 'PRODUCTMASTER') }} AS `PRODUCTMASTER`
+      name: STG_PRODUCTMASTER
+      noLinkRefs: []
+  name: STG_PRODUCTMASTER
+  overrideSQL: false
+  schema: ALCOBEV
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
