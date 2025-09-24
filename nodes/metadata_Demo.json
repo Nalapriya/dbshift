@@ -1,0 +1,101 @@
+{
+  "tables": [
+    {
+      "tableName": "dbshift.dbshift.SQL_Coalesce_ControlTable",
+      "alias": null
+    },
+    {
+      "tableName": "DBSHIFT.DBSHIFT.FACT_SALES_AGGREGATE",
+      "alias": null
+    },
+    {
+      "tableName": "DBSHIFT.DBSHIFT.SalesOrderHeader",
+      "alias": "SalesOrderHeader"
+    },
+    {
+      "tableName": "DBSHIFT.DBSHIFT.ShippingInfo",
+      "alias": "ShippingInfo"
+    },
+    {
+      "tableName": "DBSHIFT.DBSHIFT.PriorityAttributes",
+      "alias": "PriorityAttributes"
+    },
+    {
+      "tableName": "DBSHIFT.DBSHIFT.TransferredOrders",
+      "alias": "TransferredOrders"
+    }
+  ],
+  "columnsByTable": {
+    "dbshift.dbshift.SQL_Coalesce_ControlTable": [
+      "table_name",
+      "last_run_time",
+      "status"
+    ],
+    "DBSHIFT.DBSHIFT.SalesOrderHeader": [
+      "customer_id",
+      "product_category",
+      "product_subcategory",
+      "payment_method",
+      "shipping_type",
+      "order_date",
+      "shipment_mode",
+      "order_id"
+    ],
+    "DBSHIFT.DBSHIFT.ShippingInfo": [
+      "platform_used",
+      "manu_date",
+      "sales_amount",
+      "discount_applied",
+      "net_cost",
+      "shipment_mode"
+    ],
+    "DBSHIFT.DBSHIFT.PriorityAttributes": [
+      "order_priority",
+      "priority",
+      "Ste_group_exclude",
+      "video_group_exclude",
+      "nielsen_dar",
+      "comscore_vce",
+      "advanced_content",
+      "gross_impresSon_cap",
+      "Ste_group",
+      "video_group",
+      "custom_pacing",
+      "deal_type",
+      "audience_segment",
+      "delivery_frequency",
+      "ad_unit",
+      "city",
+      "city_exclude",
+      "geo_dma",
+      "geo_dma_exclude",
+      "geo_state",
+      "geo_state_exclude",
+      "zip_code",
+      "order_id"
+    ],
+    "DBSHIFT.DBSHIFT.TransferredOrders": [
+      "order_id"
+    ]
+  },
+  "joins": [
+    {
+      "type": "LEFT JOIN",
+      "leftTable": "DBSHIFT.DBSHIFT.SalesOrderHeader",
+      "rightTable": "DBSHIFT.DBSHIFT.ShippingInfo",
+      "onCondition": "SalesOrderHeader.shipment_mode = ShippingInfo.shipment_mode"
+    },
+    {
+      "type": "LEFT JOIN",
+      "leftTable": "DBSHIFT.DBSHIFT.SalesOrderHeader",
+      "rightTable": "DBSHIFT.DBSHIFT.PriorityAttributes",
+      "onCondition": "SalesOrderHeader.order_id = PriorityAttributes.order_id"
+    },
+    {
+      "type": "LEFT JOIN",
+      "leftTable": "DBSHIFT.DBSHIFT.SalesOrderHeader",
+      "rightTable": "DBSHIFT.DBSHIFT.TransferredOrders",
+      "onCondition": "SalesOrderHeader.order_id = TransferredOrders.order_id"
+    }
+  ]
+}
