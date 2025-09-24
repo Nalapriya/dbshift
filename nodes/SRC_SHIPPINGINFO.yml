@@ -1,0 +1,130 @@
+fileVersion: 1
+id: fe711a36-1e64-42b3-a128-4c2fc2b090cc
+name: SHIPPINGINFO
+operation:
+  database: DBSHIFT
+  deployEnabled: true
+  description: ""
+  locationName: DBSHIFT
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a9f1471-c006-4444-a551-665b1d92377b
+          stepCounter: fe711a36-1e64-42b3-a128-4c2fc2b090cc
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: PLATFORM_USED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6f7a731d-d421-460b-8557-4b71360ab9fa
+          stepCounter: fe711a36-1e64-42b3-a128-4c2fc2b090cc
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: MANU_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1a7b452-9f37-4f6c-848e-2895513ab514
+          stepCounter: fe711a36-1e64-42b3-a128-4c2fc2b090cc
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        name: SALES_AMOUNT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a286c0c-35cd-44b4-82a9-7c427303c7ea
+          stepCounter: fe711a36-1e64-42b3-a128-4c2fc2b090cc
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        name: DISCOUNT_APPLIED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b298495-24c6-43c3-b09e-71b56955c45b
+          stepCounter: fe711a36-1e64-42b3-a128-4c2fc2b090cc
+        config: {}
+        dataType: DECIMAL(12,2)
+        defaultValue: ""
+        description: ""
+        name: NET_COST
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5df07e59-c290-410c-99f5-4700d87878d6
+          stepCounter: fe711a36-1e64-42b3-a128-4c2fc2b090cc
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: SHIPMENT_MODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: SHIPPINGINFO
+  schema: DBSHIFT
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
