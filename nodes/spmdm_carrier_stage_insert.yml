@@ -1,0 +1,17 @@
+fileVersion: 1
+id: 3c5a6b7d-8e9f-4a1b-9c8d-7e6f5a4b3c2d
+name: spmdm_carrier_stage_insert
+parameters:
+  - name: execution_guid
+    type: STRING
+  - name: package_name
+    type: STRING
+nodes:
+  - name: VCARRIER
+  - name: STG_TCARRIER_MERGE_ETL
+  - name: VW_STG_TCARRIER_MERGE_ETL
+edges:
+  - source: VCARRIER
+    destination: STG_TCARRIER_MERGE_ETL
+  - source: STG_TCARRIER_MERGE_ETL
+    destination: VW_STG_TCARRIER_MERGE_ETL
