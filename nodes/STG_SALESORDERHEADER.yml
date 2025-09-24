@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 597a7e8e-d91d-48ef-a337-b9c2b87431e5
+id: 508c909c-e34d-4d7a-b5e1-5dd5066c0d87
 name: STG_SALESORDERHEADER
 operation:
   config:
@@ -19,116 +19,158 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 77a00f2e-e475-4d7a-ac34-8c81896a6039
-          stepCounter: 597a7e8e-d91d-48ef-a337-b9c2b87431e5
-        config: {}
-        dataType: INTEGER
-        description: ""
-        name: CUSTOMER_ID
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: b138b30d-2b44-4dd2-8874-a6984e724a1b
-                stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
-            transform: SALESORDERHEADER.CUSTOMER_ID
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: f3f52814-142c-473d-bc87-d46781292026
-          stepCounter: 597a7e8e-d91d-48ef-a337-b9c2b87431e5
-        config: {}
-        dataType: STRING
-        description: ""
-        name: PRODUCT_CATEGORY
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: b128f413-48b4-4e94-916c-e2f7b828114c
-                stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
-            transform: UPPER(SALESORDERHEADER.PRODUCT_CATEGORY)
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 0f4e040c-2550-48e0-a4a3-16a760c41031
-          stepCounter: 597a7e8e-d91d-48ef-a337-b9c2b87431e5
-        config: {}
-        dataType: STRING
-        description: ""
-        name: PRODUCT_SUBCATEGORY
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: a6318182-b7e8-46c5-8f6a-063f9b2d28a3
-                stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
-            transform: UPPER(SALESORDERHEADER.PRODUCT_SUBCATEGORY)
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 3b0b6165-4f3b-4866-9e19-06399435b54a
-          stepCounter: 597a7e8e-d91d-48ef-a337-b9c2b87431e5
-        config: {}
-        dataType: STRING
-        description: ""
-        name: PAYMENT_METHOD
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 639ef14c-12b4-4b08-bc23-c90a20e2e505
-                stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
-            transform: UPPER(SALESORDERHEADER.PAYMENT_METHOD)
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: caa16d3f-7e04-4b6d-a3d5-e6e22e5a6b0c
-          stepCounter: 597a7e8e-d91d-48ef-a337-b9c2b87431e5
-        config: {}
-        dataType: STRING
-        description: ""
-        name: SHIPPING_TYPE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 1e99876e-d90c-4448-939e-d7f1d326f634
-                stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
-            transform: UPPER(SALESORDERHEADER.SHIPPING_TYPE)
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 2f7416bd-1e82-4467-9c94-9b9c9dfd7008
-          stepCounter: 597a7e8e-d91d-48ef-a337-b9c2b87431e5
+          columnCounter: 0f0b40e9-b63d-4c31-9a7c-a49622d9b626
+          stepCounter: 508c909c-e34d-4d7a-b5e1-5dd5066c0d87
         config: {}
         dataType: TIMESTAMP
         description: ""
-        name: ORDER_DATE
+        name: order_date
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 0f3c5f4b-001c-4384-934c-d079417936a7
-                stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
-            transform: SALESORDERHEADER.ORDER_DATE
+              - columnCounter: 3a2c5a24-9b8b-4b2a-89a3-5c7755b4b1a1
+                stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+            transform: SALESORDERHEADER.order_date
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 8b671a5c-502a-4632-a5d4-4c5525414f08
-          stepCounter: 597a7e8e-d91d-48ef-a337-b9c2b87431e5
-        config: {}
-        dataType: STRING
-        description: ""
-        name: SHIPMENT_MODE
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 5352c89f-8186-4f7f-aa8e-49b816674b86
-                stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
-            transform: SALESORDERHEADER.SHIPMENT_MODE
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: a631e8b4-0239-4467-b964-6725227781b2
-          stepCounter: 597a7e8e-d91d-48ef-a337-b9c2b87431e5
+          columnCounter: 8e5d0d82-e3e9-4e5b-b903-875f15978f88
+          stepCounter: 508c909c-e34d-4d7a-b5e1-5dd5066c0d87
         config: {}
         dataType: INTEGER
         description: ""
-        name: ORDER_ID
+        name: customer_id
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: d76c66a4-4e48-43d9-93e1-31427d140e6c
-                stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
-            transform: SALESORDERHEADER.ORDER_ID
+              - columnCounter: 0f3c5b52-9b2f-4c5e-8515-f5a3b93f185a
+                stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+            transform: SALESORDERHEADER.customer_id
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d1e2e1c-5d6c-4b5c-b179-8809f6d19a4a
+          stepCounter: 508c909c-e34d-4d7a-b5e1-5dd5066c0d87
+        config: {}
+        dataType: STRING
+        description: ""
+        name: product_category
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5f1d8c19-7e5c-482a-8f78-2d8c362024b1
+                stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+            transform: SALESORDERHEADER.product_category
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7e7f7b31-2f7d-4c3d-82c8-8a8b16e45d1d
+          stepCounter: 508c909c-e34d-4d7a-b5e1-5dd5066c0d87
+        config: {}
+        dataType: STRING
+        description: ""
+        name: product_subcategory
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8b078972-e1d4-420a-8d2b-6c4d8b67f1b7
+                stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+            transform: SALESORDERHEADER.product_subcategory
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e3c9e6d-5a8d-4b8c-b039-4d8b8e0b2d6a
+          stepCounter: 508c909c-e34d-4d7a-b5e1-5dd5066c0d87
+        config: {}
+        dataType: STRING
+        description: ""
+        name: store_location
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c02c114f-4d39-4467-872f-410a08e1e77d
+                stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+            transform: SALESORDERHEADER.store_location
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a4e9b72-3e2c-4b2a-8d8a-8b0b5d0c7e2c
+          stepCounter: 508c909c-e34d-4d7a-b5e1-5dd5066c0d87
+        config: {}
+        dataType: STRING
+        description: ""
+        name: supplier_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2d197621-30d8-4f24-9b2e-07e3a9561081
+                stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+            transform: SALESORDERHEADER.supplier_name
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6f8e2c0e-4d5c-4b3a-8b0b-5d0c7e2c8d2a
+          stepCounter: 508c909c-e34d-4d7a-b5e1-5dd5066c0d87
+        config: {}
+        dataType: STRING
+        description: ""
+        name: payment_method
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d3246835-f483-42e5-8f6a-f117c49e7b2f
+                stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+            transform: SALESORDERHEADER.payment_method
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2d1e2e1-c5d6-4c4d-b179-8809f6d19a4a
+          stepCounter: 508c909c-e34d-4d7a-b5e1-5dd5066c0d87
+        config: {}
+        dataType: STRING
+        description: ""
+        name: shipping_type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 80e30d7b-41f2-432d-80f4-5d9c24097f48
+                stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+            transform: SALESORDERHEADER.shipping_type
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1b2e3d4e-5f6a-4b3c-b039-4d8b8e0b2d6a
+          stepCounter: 508c909c-e34d-4d7a-b5e1-5dd5066c0d87
+        config: {}
+        dataType: STRING
+        description: ""
+        name: region
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a63b86ae-7c37-418b-82a1-5d6e27163c45
+                stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+            transform: SALESORDERHEADER.region
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e3d4e5f-6a7b-4c3d-82c8-8a8b16e45d1d
+          stepCounter: 508c909c-e34d-4d7a-b5e1-5dd5066c0d87
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: order_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3a137e3d-6161-4277-920d-8302062f6b5b
+                stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+            transform: SALESORDERHEADER.order_id
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b5a9d8d1-7c5b-489e-9f3a-23f9e9845f1b
+          stepCounter: 508c909c-e34d-4d7a-b5e1-5dd5066c0d87
+        config: {}
+        dataType: STRING
+        description: ""
+        name: shipment_mode
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d1b1d7d0-1c0c-4384-8854-c9f7a63d76e4
+                stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+            transform: SALESORDERHEADER.shipment_mode
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
@@ -139,8 +181,7 @@ operation:
           - locationName: DBSHIFT
             nodeName: SALESORDERHEADER
         join:
-          joinCondition: FROM {{ ref('DBSHIFT', 'SALESORDERHEADER') }} `SALESORDERHEADER`
-            WHERE SALESORDERHEADER.customer_id BETWEEN 180 AND 200
+          joinCondition: FROM {{ ref('DBSHIFT', 'SALESORDERHEADER') }} AS SALESORDERHEADER
         name: STG_SALESORDERHEADER
         noLinkRefs: []
   name: STG_SALESORDERHEADER

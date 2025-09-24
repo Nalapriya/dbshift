@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 5790a612-4290-4a8e-a9ac-d21c00f08922
+id: 61e93838-8924-42f5-93df-520e7a2b0051
 name: SALESORDERHEADER
 operation:
   database: DBSHIFT
@@ -13,108 +13,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: b138b30d-2b44-4dd2-8874-a6984e724a1b
-          stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
-        config: {}
-        dataType: INTEGER
-        defaultValue: ""
-        description: ""
-        name: CUSTOMER_ID
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: b128f413-48b4-4e94-916c-e2f7b828114c
-          stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
-        config: {}
-        dataType: STRING
-        defaultValue: ""
-        description: ""
-        name: PRODUCT_CATEGORY
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: a6318182-b7e8-46c5-8f6a-063f9b2d28a3
-          stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
-        config: {}
-        dataType: STRING
-        defaultValue: ""
-        description: ""
-        name: PRODUCT_SUBCATEGORY
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 639ef14c-12b4-4b08-bc23-c90a20e2e505
-          stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
-        config: {}
-        dataType: STRING
-        defaultValue: ""
-        description: ""
-        name: PAYMENT_METHOD
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 1e99876e-d90c-4448-939e-d7f1d326f634
-          stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
-        config: {}
-        dataType: STRING
-        defaultValue: ""
-        description: ""
-        name: SHIPPING_TYPE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 0f3c5f4b-001c-4384-934c-d079417936a7
-          stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
+          columnCounter: 3a2c5a24-9b8b-4b2a-89a3-5c7755b4b1a1
+          stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
         description: ""
-        name: ORDER_DATE
+        name: order_date
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -127,32 +32,184 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 5352c89f-8186-4f7f-aa8e-49b816674b86
-          stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
-        config: {}
-        dataType: STRING
-        defaultValue: ""
-        description: ""
-        name: SHIPMENT_MODE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: d76c66a4-4e48-43d9-93e1-31427d140e6c
-          stepCounter: 5790a612-4290-4a8e-a9ac-d21c00f08922
+          columnCounter: 0f3c5b52-9b2f-4c5e-8515-f5a3b93f185a
+          stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
         config: {}
         dataType: INTEGER
         defaultValue: ""
         description: ""
-        name: ORDER_ID
+        name: customer_id
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5f1d8c19-7e5c-482a-8f78-2d8c362024b1
+          stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: product_category
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b078972-e1d4-420a-8d2b-6c4d8b67f1b7
+          stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: product_subcategory
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c02c114f-4d39-4467-872f-410a08e1e77d
+          stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: store_location
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d197621-30d8-4f24-9b2e-07e3a9561081
+          stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: supplier_name
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d3246835-f483-42e5-8f6a-f117c49e7b2f
+          stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: payment_method
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 80e30d7b-41f2-432d-80f4-5d9c24097f48
+          stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: shipping_type
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a63b86ae-7c37-418b-82a1-5d6e27163c45
+          stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: region
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a137e3d-6161-4277-920d-8302062f6b5b
+          stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        name: order_id
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1b1d7d0-1c0c-4384-8854-c9f7a63d76e4
+          stepCounter: 61e93838-8924-42f5-93df-520e7a2b0051
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: shipment_mode
         nullable: true
         primaryKey: false
         sourceColumnReferences:

@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 062d30e3-5f05-4f7f-8d96-037000d024d0
+id: 4d2c1b0a-9f8e-7654-3210-edcba9876543
 name: STG_TRANSFERREDORDERS
 operation:
   config:
@@ -19,18 +19,60 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 3b1a1a5b-6f6a-463e-b7d6-7f41f021e06d
-          stepCounter: 062d30e3-5f05-4f7f-8d96-037000d024d0
+          columnCounter: 1a2b3c4d-5e6f-7890-1234-567890abcdef
+          stepCounter: 4d2c1b0a-9f8e-7654-3210-edcba9876543
         config: {}
         dataType: INTEGER
         description: ""
-        name: ORDER_ID
+        name: order_id
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: d7f066b4-0255-442b-b8d4-53942b0a2182
-                stepCounter: 97891e4f-b674-4b45-912a-431835d0c727
-            transform: TRANSFERREDORDERS.ORDER_ID
+              - columnCounter: 1a2b3c4d-5e6f-7890-fedc-ba9876543210
+                stepCounter: 5e3d2c1b-0a9f-8765-4321-fedcba987654
+            transform: TRANSFERREDORDERS.order_id
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2b3c4d5e-6f7a-8901-2345-67890abcdef1
+          stepCounter: 4d2c1b0a-9f8e-7654-3210-edcba9876543
+        config: {}
+        dataType: DECIMAL(18,2)
+        description: ""
+        name: invoice_amt
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2b3c4d5e-6f7a-8901-edcb-a98765432101
+                stepCounter: 5e3d2c1b-0a9f-8765-4321-fedcba987654
+            transform: TRANSFERREDORDERS.invoice_amt
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3c4d5e6f-7a8b-9012-3456-7890abcdef12
+          stepCounter: 4d2c1b0a-9f8e-7654-3210-edcba9876543
+        config: {}
+        dataType: DECIMAL(18,2)
+        description: ""
+        name: adjusted_invoice_amt
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3c4d5e6f-7a8b-9012-dcba-987654321012
+                stepCounter: 5e3d2c1b-0a9f-8765-4321-fedcba987654
+            transform: TRANSFERREDORDERS.adjusted_invoice_amt
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4d5e6f7a-8b9c-0123-4567-890abcdef123
+          stepCounter: 4d2c1b0a-9f8e-7654-3210-edcba9876543
+        config: {}
+        dataType: DECIMAL(18,2)
+        description: ""
+        name: recognized_revenue
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4d5e6f7a-8b9c-0123-cba9-876543210123
+                stepCounter: 5e3d2c1b-0a9f-8765-4321-fedcba987654
+            transform: TRANSFERREDORDERS.recognized_revenue
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
@@ -41,7 +83,7 @@ operation:
           - locationName: DBSHIFT
             nodeName: TRANSFERREDORDERS
         join:
-          joinCondition: FROM {{ ref('DBSHIFT', 'TRANSFERREDORDERS') }} `TRANSFERREDORDERS`
+          joinCondition: FROM {{ ref('DBSHIFT', 'TRANSFERREDORDERS') }} AS TRANSFERREDORDERS
         name: STG_TRANSFERREDORDERS
         noLinkRefs: []
   name: STG_TRANSFERREDORDERS

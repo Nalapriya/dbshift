@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 5e638202-e25f-4a69-8758-52c6f6634d0b
+id: 7c5b4a3e-2d1f-4321-8765-fedcba987654
 name: PRIORITYATTRIBUTES
 operation:
   database: DBSHIFT
@@ -13,13 +13,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 97f1f0d3-3760-4966-9ab8-0a0d4c185e35
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 1a2b3c4d-5e6f-7890-1234-567890abcdef
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: INTEGER
         defaultValue: ""
         description: ""
-        name: ORDER_ID
+        name: order_id
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -32,13 +32,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 60a5e2f1-c454-4114-8f4b-09252a129ef9
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 2b3c4d5e-6f7a-8901-2345-67890abcdef1
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: ORDER_PRIORITY
+        name: order_priority
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -51,13 +51,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: d1a01c80-c5ef-45d2-b883-7c7017de83f7
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 3c4d5e6f-7a8b-9012-3456-7890abcdef12
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: PRIORITY
+        name: priority
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -70,13 +70,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 9f725350-f865-4f7f-a641-f0de7e9b0cd3
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 4d5e6f7a-8b9c-0123-4567-890abcdef123
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: STE_GROUP_EXCLUDE
+        name: Ste_group_exclude
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -89,13 +89,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: d1b1448b-3b39-4447-bfbd-0d48f7d98305
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 5e6f7a8b-9c0d-1234-5678-90abcdef1234
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: VIDEO_GROUP_EXCLUDE
+        name: video_group_exclude
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -108,13 +108,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 2f741c09-a72e-4628-ad82-0196720f7895
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 6f7a8b9c-0d1e-2345-6789-0abcdef12345
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: NIELSEN_DAR
+        name: nielsen_dar
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -127,13 +127,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: f32c7442-f045-4235-971e-08c3818e3848
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 7a8b9c0d-1e2f-3456-7890-abcdef123456
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: COMSCORE_VCE
+        name: comscore_vce
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -146,13 +146,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 7750897f-96a8-4445-985a-0d7054f15d9a
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 8b9c0d1e-2f3a-4567-8901-bcdef1234567
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: ADVANCED_CONTENT
+        name: advanced_content
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -165,13 +165,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: af686256-6547-497d-b039-38e5622a5719
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 9c0d1e2f-3a4b-5678-9012-cdef12345678
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: GROSS_IMPRESSON_CAP
+        name: gross_impresSon_cap
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -184,13 +184,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 2d3393b4-4e2b-4560-b617-64906f235552
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 0d1e2f3a-4b5c-6789-0123-def123456789
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: STE_GROUP
+        name: Ste_group
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -203,13 +203,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 16182c0f-ed5a-4b9b-90f9-67d71f496738
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 1e2f3a4b-5c6d-7890-1234-ef1234567890
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: VIDEO_GROUP
+        name: video_group
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -222,13 +222,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: f3165b4f-fd55-46b5-927b-e74f1b5cd853
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 2f3a4b5c-6d7e-8901-2345-f12345678901
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: CUSTOM_PACING
+        name: custom_pacing
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -241,13 +241,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 76f3f09b-a320-410a-b333-e0242279b900
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 3a4b5c6d-7e8f-9012-3456-123456789012
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: DEAL_TYPE
+        name: deal_type
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -260,13 +260,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 59a16f6b-7157-4147-9753-48b488698115
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 4b5c6d7e-8f9a-0123-4567-234567890123
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: AUDIENCE_SEGMENT
+        name: audience_segment
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -279,13 +279,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: d322f7cc-82f5-46b5-a335-e10f3c64c7d9
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 5c6d7e8f-9a0b-1234-5678-345678901234
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: DELIVERY_FREQUENCY
+        name: delivery_frequency
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -298,13 +298,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 7e735a39-33b8-4c91-b3b0-2b1ff910f540
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 6d7e8f9a-0b1c-2345-6789-456789012345
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: AD_UNIT
+        name: ad_unit
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -317,13 +317,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 5d13b4f6-0679-4d87-9b88-5c7fcb61678f
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 7e8f9a0b-1c2d-3456-7890-567890123456
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: CITY
+        name: city
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -336,13 +336,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: f316d2b6-a28a-4c28-98e3-057d6b35d03a
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 8f9a0b1c-2d3e-4567-8901-678901234567
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: CITY_EXCLUDE
+        name: city_exclude
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -355,13 +355,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: b130ff2a-3652-4469-8834-0d4ed2e75294
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 9a0b1c2d-3e4f-5678-9012-789012345678
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: GEO_DMA
+        name: geo_dma
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -374,13 +374,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: a6182c19-74e8-4228-a400-f9ef6a084c8a
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 0b1c2d3e-4f5a-6789-0123-890123456789
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: GEO_DMA_EXCLUDE
+        name: geo_dma_exclude
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -393,13 +393,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: c17387a2-f673-455b-b9f1-a12b26284698
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 1c2d3e4f-5a6b-7890-1234-901234567890
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: GEO_STATE
+        name: geo_state
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -412,13 +412,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 322c7a72-747f-449e-b83c-f4b6791d3106
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 2d3e4f5a-6b7c-8901-2345-012345678901
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: GEO_STATE_EXCLUDE
+        name: geo_state_exclude
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -431,13 +431,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 326f5f3e-46ff-45e3-a6d1-ac96c343b9c4
-          stepCounter: 5e638202-e25f-4a69-8758-52c6f6634d0b
+          columnCounter: 3e4f5a6b-7c8d-9012-3456-123456789012
+          stepCounter: 7c5b4a3e-2d1f-4321-8765-fedcba987654
         config: {}
         dataType: STRING
         defaultValue: ""
         description: ""
-        name: ZIP_CODE
+        name: zip_code
         nullable: true
         primaryKey: false
         sourceColumnReferences:
