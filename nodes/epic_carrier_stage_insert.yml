@@ -1,0 +1,21 @@
+fileVersion: 1
+id: 9a2b5d4e-1b3c-4a6f-8d9e-1e2f3a4b5c6d
+name: epic_carrier_stage_insert
+parameters:
+  - name: execution_guid
+    type: STRING
+  - name: package_name
+    type: STRING
+nodes:
+  - id: 5b1d5d17-9195-498c-8519-74e6b266a40a
+    name: VCARRIER
+  - id: 9a7b3c2d-1e2f-4b5c-8d9e-1f2a3b4c5d6e
+    name: STG_TCARRIER_MERGE_ETL
+  - id: 4e8d2c1f-5a6b-4f7d-8e9c-3b4d5e6f7a8b
+    name: VW_STG_TCARRIER_MERGE_ETL
+edges:
+  - sourceNodeID: 5b1d5d17-9195-498c-8519-74e6b266a40a
+    targetNodeID: 9a7b3c2d-1e2f-4b5c-8d9e-1f2a3b4c5d6e
+  - sourceNodeID: 9a7b3c2d-1e2f-4b5c-8d9e-1f2a3b4c5d6e
+    targetNodeID: 4e8d2c1f-5a6b-4f7d-8e9c-3b4d5e6f7a8b
+type: Pipeline
