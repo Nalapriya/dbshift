@@ -1,0 +1,132 @@
+fileVersion: 1
+id: 3750e04e-7b7d-411a-8b83-207d727b3d1b
+name: FCT_MESSAGE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: MDM_ALLIANT_STAGE
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: MDM_ALLIANT_STAGE
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 3333a111-13c5-449e-8c38-89c565d07018
+        stepCounter: 3750e04e-7b7d-411a-8b83-207d727b3d1b
+      config: {}
+      dataType: STRING
+      description: ""
+      hashDetails:
+        hashAlgorithm: MD5
+      name: PACKAGE_EXECUTION_GUID
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 2222a111-a8e7-4b7f-b258-3d14876a953e
+          stepCounter: 2750e04e-6e4d-44a1-b8f4-61c0c9f1345d
+        transform: STG_MESSAGE.PACKAGE_EXECUTION_GUID
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 3333b222-6b94-43ee-b174-83935824c878
+        stepCounter: 3750e04e-7b7d-411a-8b83-207d727b3d1b
+      config: {}
+      dataType: STRING
+      description: ""
+      hashDetails:
+        hashAlgorithm: MD5
+      name: PACKAGE_NAME
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 2222b222-3714-41d3-a212-9c1797e84992
+          stepCounter: 2750e04e-6e4d-44a1-b8f4-61c0c9f1345d
+        transform: STG_MESSAGE.PACKAGE_NAME
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 3333c333-6a9c-48c9-8d8a-641575bbd2a8
+        stepCounter: 3750e04e-7b7d-411a-8b83-207d727b3d1b
+      config: {}
+      dataType: STRING
+      description: ""
+      hashDetails:
+        hashAlgorithm: MD5
+      name: PROCEDURE_NAME
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 2222c333-6bc7-4340-8b1b-4179374465b5
+          stepCounter: 2750e04e-6e4d-44a1-b8f4-61c0c9f1345d
+        transform: STG_MESSAGE.PROCEDURE_NAME
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 3333d444-3d6d-4952-b9b5-77de66687258
+        stepCounter: 3750e04e-7b7d-411a-8b83-207d727b3d1b
+      config: {}
+      dataType: STRING
+      description: ""
+      hashDetails:
+        hashAlgorithm: MD5
+      name: MESSAGE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 2222d444-8d96-48c9-a5e2-04e386055d72
+          stepCounter: 2750e04e-6e4d-44a1-b8f4-61c0c9f1345d
+        transform: STG_MESSAGE.MESSAGE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 3333e555-9273-42e5-a6e5-22d76535d469
+        stepCounter: 3750e04e-7b7d-411a-8b83-207d727b3d1b
+      config: {}
+      dataType: STRING
+      description: ""
+      hashDetails:
+        hashAlgorithm: MD5
+      name: MESSAGE_TYPE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 2222e555-be23-455b-80a2-28c946b5a38a
+          stepCounter: 2750e04e-6e4d-44a1-b8f4-61c0c9f1345d
+        transform: STG_MESSAGE.MESSAGE_TYPE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 3333f666-d245-4202-b25b-08f51a7a0b80
+        stepCounter: 3750e04e-7b7d-411a-8b83-207d727b3d1b
+      config: {}
+      dataType: TIMESTAMP
+      description: ""
+      isSystemCreateDate: true
+      name: CREATE_DATE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+    - aliases: {}
+      customSQL:
+        customSQL: ""
+      dependencies:
+      - locationName: MDM_ALLIANT_STAGE
+        nodeName: STG_MESSAGE
+      join:
+        joinCondition: FROM {{ ref('ETL', 'STG_MESSAGE') }} AS STG_MESSAGE
+      name: FCT_MESSAGE
+      noLinkRefs: []
+  name: FCT_MESSAGE
+  overrideSQL: false
+  schema: ETL
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

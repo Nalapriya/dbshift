@@ -1,0 +1,135 @@
+fileVersion: 1
+id: 2750e04e-6e4d-44a1-b8f4-61c0c9f1345d
+name: STG_MESSAGE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: MDM_ALLIANT_STAGE
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: MDM_ALLIANT_STAGE
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 2222a111-a8e7-4b7f-b258-3d14876a953e
+        stepCounter: 2750e04e-6e4d-44a1-b8f4-61c0c9f1345d
+      config: {}
+      dataType: STRING
+      description: ""
+      hashDetails:
+        hashAlgorithm: MD5
+      name: PACKAGE_EXECUTION_GUID
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 1111a111-c30f-488b-b8c1-f2f11816e881
+          stepCounter: 1750e04e-2895-4428-98e3-ac7c244b7f01
+        transform: MESSAGE.package_execution_guid
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 2222b222-3714-41d3-a212-9c1797e84992
+        stepCounter: 2750e04e-6e4d-44a1-b8f4-61c0c9f1345d
+      config: {}
+      dataType: STRING
+      description: ""
+      hashDetails:
+        hashAlgorithm: MD5
+      name: PACKAGE_NAME
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 1111b222-7907-427f-94a2-1191060951a8
+          stepCounter: 1750e04e-2895-4428-98e3-ac7c244b7f01
+        transform: MESSAGE.package_name
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 2222c333-6bc7-4340-8b1b-4179374465b5
+        stepCounter: 2750e04e-6e4d-44a1-b8f4-61c0c9f1345d
+      config: {}
+      dataType: STRING
+      description: ""
+      hashDetails:
+        hashAlgorithm: MD5
+      name: PROCEDURE_NAME
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 1111c333-31f0-46d8-a128-48b4e80e3c50
+          stepCounter: 1750e04e-2895-4428-98e3-ac7c244b7f01
+        transform: MESSAGE.procedure_name
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 2222d444-8d96-48c9-a5e2-04e386055d72
+        stepCounter: 2750e04e-6e4d-44a1-b8f4-61c0c9f1345d
+      config: {}
+      dataType: STRING
+      description: ""
+      hashDetails:
+        hashAlgorithm: MD5
+      name: MESSAGE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 1111d444-1111-4475-ac1c-13425ac25e98
+          stepCounter: 1750e04e-2895-4428-98e3-ac7c244b7f01
+        transform: MESSAGE.message
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 2222e555-be23-455b-80a2-28c946b5a38a
+        stepCounter: 2750e04e-6e4d-44a1-b8f4-61c0c9f1345d
+      config: {}
+      dataType: STRING
+      description: ""
+      hashDetails:
+        hashAlgorithm: MD5
+      name: MESSAGE_TYPE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 1111e555-5c5f-4d9f-a89e-26f6345e69e3
+          stepCounter: 1750e04e-2895-4428-98e3-ac7c244b7f01
+        transform: MESSAGE.message_type
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 2222f666-074f-4d2d-83b3-5cd2e2b34762
+        stepCounter: 2750e04e-6e4d-44a1-b8f4-61c0c9f1345d
+      config: {}
+      dataType: TIMESTAMP
+      description: ""
+      hashDetails:
+        hashAlgorithm: MD5
+      name: CREATE_DATE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 1111f666-ac56-4b2a-a92c-63b7e7161b9e
+          stepCounter: 1750e04e-2895-4428-98e3-ac7c244b7f01
+        transform: MESSAGE.create_date
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+    - aliases: {}
+      customSQL:
+        customSQL: ""
+      dependencies:
+      - locationName: MDM_ALLIANT_STAGE
+        nodeName: MESSAGE
+      join:
+        joinCondition: FROM {{ ref('ETL', 'MESSAGE') }} AS MESSAGE
+      name: STG_MESSAGE
+      noLinkRefs: []
+  name: STG_MESSAGE
+  overrideSQL: false
+  schema: ETL
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
