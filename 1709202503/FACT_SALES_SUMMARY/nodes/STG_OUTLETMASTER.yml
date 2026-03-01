@@ -1,0 +1,67 @@
+fileVersion: 1
+id: 8c9d0e1f-2a3b-4c4d-5e6f-7a8b9c0d1e2f
+name: STG_OUTLETMASTER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALCOBEVDB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5d6e7f8a-9b0c-4d1e-2f3a-4b5c6d7e8f9g
+          stepCounter: 8c9d0e1f-2a3b-4c4d-5e6f-7a8b9c0d1e2f
+        config: {}
+        dataType: STRING
+        description: ""
+        name: OUTLET_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8d76a5c3-2b45-4a87-9b43-987d23a456b8
+                stepCounter: f456a287-3d98-4c56-82f3-124b678c32d9
+            transform: SRC_OUTLETMASTER.OUTLET_CODE
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6e7f8a9b-0c1d-4e2f-3a4b-5c6d7e8f9g0h
+          stepCounter: 8c9d0e1f-2a3b-4c4d-5e6f-7a8b9c0d1e2f
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: ACTIVE_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3c54d76a-98b4-4b56-8f34-123a456b78d9
+                stepCounter: f456a287-3d98-4c56-82f3-124b678c32d9
+            transform: SRC_OUTLETMASTER.ACTIVE_FLAG
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ALCOBEVDB
+            nodeName: SRC_OUTLETMASTER
+        join:
+          joinCondition: FROM {{ ref('ALCOBEV', 'SRC_OUTLETMASTER') }} AS SRC_OUTLETMASTER
+        name: STG_OUTLETMASTER
+        noLinkRefs: []
+  name: STG_OUTLETMASTER
+  overrideSQL: false
+  schema: ALCOBEV
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

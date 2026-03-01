@@ -1,0 +1,95 @@
+fileVersion: 1
+id: 59a16f6b-7157-4ac4-9141-92df082725e2
+name: STG_ACTIVATIONMASTER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALCOBEVDB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 0f2b3e40-8456-4277-9f6b-1936e780c102
+        stepCounter: 59a16f6b-7157-4ac4-9141-92df082725e2
+      config: {}
+      dataType: STRING
+      description: ""
+      name: PRODUCTLEVELCODE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: d364a938-f1c5-472d-8e54-523c97693d7c
+          stepCounter: 6e9e34d9-95e3-463e-b873-1f1f26a11e13
+        transform: ACTIVATIONMASTER.PRODUCTLEVELCODE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 3229b0a6-574f-4318-8f83-e889b7e33529
+        stepCounter: 59a16f6b-7157-4ac4-9141-92df082725e2
+      config: {}
+      dataType: STRING
+      description: ""
+      name: PROMOTIONDESCRIPTION
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: a63b499f-e3c3-42e7-9d6e-1d54e4f7396c
+          stepCounter: 6e9e34d9-95e3-463e-b873-1f1f26a11e13
+        transform: ACTIVATIONMASTER.PROMOTIONDESCRIPTION
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 53a25c34-7a3c-41c2-9e32-0545f1b5ac8f
+        stepCounter: 59a16f6b-7157-4ac4-9141-92df082725e2
+      config: {}
+      dataType: STRING
+      description: ""
+      name: EFFECTIVEFROM
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 3b137839-8692-411a-8809-7d84f885f838
+          stepCounter: 6e9e34d9-95e3-463e-b873-1f1f26a11e13
+        transform: ACTIVATIONMASTER.EFFECTIVEFROM
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: fd69b62a-a92c-4734-924c-648b2eb5943b
+        stepCounter: 59a16f6b-7157-4ac4-9141-92df082725e2
+      config: {}
+      dataType: STRING
+      description: ""
+      name: EFFECTIVETO
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: d684a275-d144-486d-88b9-4458f4a13809
+          stepCounter: 6e9e34d9-95e3-463e-b873-1f1f26a11e13
+        transform: ACTIVATIONMASTER.EFFECTIVETO
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+    - aliases: {}
+      customSQL:
+        customSQL: ""
+      dependencies:
+      - locationName: ALCOBEVDB
+        nodeName: ACTIVATIONMASTER
+      join:
+        joinCondition: FROM {{ ref('ALCOBEV', 'ACTIVATIONMASTER') }} AS `ACTIVATIONMASTER`
+      name: STG_ACTIVATIONMASTER
+      noLinkRefs: []
+  name: STG_ACTIVATIONMASTER
+  overrideSQL: false
+  schema: ALCOBEV
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

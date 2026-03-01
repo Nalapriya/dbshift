@@ -1,0 +1,67 @@
+fileVersion: 1
+id: 55909249-14a0-40e1-a065-c3f25c7e14a7
+name: DIM_COMPANY
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ALCOBEVDB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 63e03102-3c82-42da-9195-21d37800078b
+        stepCounter: 55909249-14a0-40e1-a065-c3f25c7e14a7
+      config: {}
+      dataType: STRING
+      description: ""
+      name: COMPANYCODE
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: 5885f8e5-33df-4c25-be9f-b7692b1580f4
+          stepCounter: b4132b17-09d6-4449-8d83-42e56e076722
+        transform: STG_COMPANYMASTER.COMPANYCODE
+    - appliedColumnTests: {}
+      columnReference:
+        columnCounter: 350e97d8-ab7f-4424-9b55-d4cd75658e39
+        stepCounter: 55909249-14a0-40e1-a065-c3f25c7e14a7
+      config: {}
+      dataType: STRING
+      description: ""
+      name: COMPANYNAME
+      nullable: true
+      sourceColumnReferences:
+      - columnReferences:
+        - columnCounter: df7a4e0c-80a5-48b5-9080-692ab6182103
+          stepCounter: b4132b17-09d6-4449-8d83-42e56e076722
+        transform: STG_COMPANYMASTER.COMPANYNAME
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+    - aliases: {}
+      customSQL:
+        customSQL: ""
+      dependencies:
+      - locationName: ALCOBEVDB
+        nodeName: STG_COMPANYMASTER
+      join:
+        joinCondition: FROM {{ ref('ALCOBEV', 'STG_COMPANYMASTER') }} AS `STG_COMPANYMASTER`
+      name: DIM_COMPANY
+      noLinkRefs: []
+  name: DIM_COMPANY
+  overrideSQL: false
+  schema: ALCOBEV
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,54 @@
+fileVersion: 1
+id: 59d57a3e-7b98-4b71-9c3f-c1f513f1b2d0
+name: SRC_COMPANYMASTER
+operation:
+  database: ALCOBEVDB
+  deployEnabled: true
+  description: ""
+  locationName: ALCOBEVDB
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a63e6734-7275-4d7a-85d8-04f762f275e7
+          stepCounter: 59d57a3e-7b98-4b71-9c3f-c1f513f1b2d0
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: COMPANYCODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6f8745d0-9e32-4e4f-b98a-211c4419992c
+          stepCounter: 59d57a3e-7b98-4b71-9c3f-c1f513f1b2d0
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: COMPANYNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: SRC_COMPANYMASTER
+  schema: ALCOBEV
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

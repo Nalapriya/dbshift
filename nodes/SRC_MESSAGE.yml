@@ -1,0 +1,130 @@
+fileVersion: 1
+id: 1750e04e-2895-4428-98e3-ac7c244b7f01
+name: MESSAGE
+operation:
+  database: MDM_ALLIANT_STAGE
+  deployEnabled: true
+  description: ""
+  locationName: MDM_ALLIANT_STAGE
+  metadata:
+    columns:
+    - acceptedValues:
+        strictMatch: true
+        values: []
+      appliedColumnTests: {}
+      columnReference:
+        columnCounter: 1111a111-c30f-488b-b8c1-f2f11816e881
+        stepCounter: 1750e04e-2895-4428-98e3-ac7c244b7f01
+      config: {}
+      dataType: STRING
+      defaultValue: ""
+      description: ""
+      name: package_execution_guid
+      nullable: true
+      primaryKey: false
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: ""
+      transform: ""
+      uniqueKey: false
+    - acceptedValues:
+        strictMatch: true
+        values: []
+      appliedColumnTests: {}
+      columnReference:
+        columnCounter: 1111b222-7907-427f-94a2-1191060951a8
+        stepCounter: 1750e04e-2895-4428-98e3-ac7c244b7f01
+      config: {}
+      dataType: STRING
+      defaultValue: ""
+      description: ""
+      name: package_name
+      nullable: true
+      primaryKey: false
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: ""
+      transform: ""
+      uniqueKey: false
+    - acceptedValues:
+        strictMatch: true
+        values: []
+      appliedColumnTests: {}
+      columnReference:
+        columnCounter: 1111c333-31f0-46d8-a128-48b4e80e3c50
+        stepCounter: 1750e04e-2895-4428-98e3-ac7c244b7f01
+      config: {}
+      dataType: STRING
+      defaultValue: ""
+      description: ""
+      name: procedure_name
+      nullable: true
+      primaryKey: false
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: ""
+      transform: ""
+      uniqueKey: false
+    - acceptedValues:
+        strictMatch: true
+        values: []
+      appliedColumnTests: {}
+      columnReference:
+        columnCounter: 1111d444-1111-4475-ac1c-13425ac25e98
+        stepCounter: 1750e04e-2895-4428-98e3-ac7c244b7f01
+      config: {}
+      dataType: STRING
+      defaultValue: ""
+      description: ""
+      name: message
+      nullable: true
+      primaryKey: false
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: ""
+      transform: ""
+      uniqueKey: false
+    - acceptedValues:
+        strictMatch: true
+        values: []
+      appliedColumnTests: {}
+      columnReference:
+        columnCounter: 1111e555-5c5f-4d9f-a89e-26f6345e69e3
+        stepCounter: 1750e04e-2895-4428-98e3-ac7c244b7f01
+      config: {}
+      dataType: STRING
+      defaultValue: ""
+      description: ""
+      name: message_type
+      nullable: true
+      primaryKey: false
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: ""
+      transform: ""
+      uniqueKey: false
+    - acceptedValues:
+        strictMatch: true
+        values: []
+      appliedColumnTests: {}
+      columnReference:
+        columnCounter: 1111f666-ac56-4b2a-a92c-63b7e7161b9e
+        stepCounter: 1750e04e-2895-4428-98e3-ac7c244b7f01
+      config: {}
+      dataType: TIMESTAMP
+      defaultValue: ""
+      description: ""
+      name: create_date
+      nullable: true
+      primaryKey: false
+      sourceColumnReferences:
+      - columnReferences: []
+        transform: ""
+      transform: ""
+      uniqueKey: false
+  name: MESSAGE
+  schema: ETL
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
